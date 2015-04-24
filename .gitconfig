@@ -1,0 +1,58 @@
+[user]
+	name = Albert
+	email = awohletz@homejoy.com
+[filter "media"]
+	clean = git media clean %f
+	smudge = git media smudge %f
+	required = true
+[color]
+        ui = auto
+
+[color "branch"]
+        current = yellow reverse
+        local = yellow
+        remote = green
+
+[color "diff"]
+        meta = yellow bold
+        frag = magenta bold
+        old = red bold
+        new = green bold
+        whitespace = red reverse
+
+[color "status"]
+        added = yellow
+        changed = green
+        untracked = cyan
+[alias]
+# Pretty git log with ‘git ls’
+ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
+
+# Same as ls but shows file changes
+ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+
+# no color log for pipes
+lnc = log --pretty=format:"%h\\ %s\\ [%cn]"
+
+# File log
+filelog = log -u
+fl = log -u
+
+# Grep
+grep = grep -Ii
+
+# shortcuts
+cp = cherry-pick
+st = status -s
+cl = clone
+ci = commit
+co = checkout
+com = checkout origin/master --
+br = branch
+d = diff --word-diff
+dc = diff --cached
+po = push origin
+p = pull
+a = commit --amend
+stat = log --stat --no-merges
+history = for-each-ref --sort=committerdate refs/heads/ --format='%(refname:short) %(committerdate:short)'
