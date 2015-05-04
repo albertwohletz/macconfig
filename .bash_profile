@@ -17,6 +17,9 @@ alias b="cd -"
 alias u="cd .."
 alias l="ls -lrt"
 
+# Git shorten
+alias g="git"
+
 ###########
 # Homejoy #
 ###########
