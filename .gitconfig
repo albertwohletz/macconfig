@@ -47,12 +47,13 @@ st = status -s
 cl = clone
 ci = commit
 co = checkout
-com = checkout origin/master --
+com = checkout master
 br = branch
 d = diff --word-diff
+dm = diff HEAD origin/master
 dc = diff --cached
-po = "!git push --set-upstream origin \"$(git rev-parse --abbrev-ref HEAD)\""
 p = pull
+po = "!git push --set-upstream origin \"$(git rev-parse --abbrev-ref HEAD)\""
 a = commit --amend
 stat = log --stat --no-merges
 history = for-each-ref --sort=committerdate refs/heads/ --format='%(refname:short) %(committerdate:short)'
